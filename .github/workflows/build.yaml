@@ -75,4 +75,11 @@ jobs:
 
       - name: Verify Kubernetes Cluster Access
         run: kubectl get nodes
+
+      - name: Helm Deploy and Upgrade
+        run: |
+          helm upgrade --install node-prom-app ./helm/node-prom-app \
+            --set image.repository=${{ secrets.DOCKER_USERNAME }}/node-prom-app \
+            --set image.tag=${{ github.sha }} \
+            --namespace node-app
       
