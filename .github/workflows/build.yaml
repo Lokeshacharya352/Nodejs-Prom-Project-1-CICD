@@ -29,7 +29,8 @@ jobs:
         uses: sonarsource/sonarqube-scan-action@v4
         with:
           args: >
-            -Dsonar.projectKey=node-prom-app
+            -Dsonar.projectKey=nodejs-test
+            -Dsonar.sources=.
         env:
           SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST }}
