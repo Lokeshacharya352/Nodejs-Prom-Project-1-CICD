@@ -55,6 +55,7 @@ The GitHub Actions pipeline performs the following steps:
 9. Configure AWS credentials
 10. Connect to Amazon EKS cluster
 11. Verify Kubernetes cluster access
+12. Kubernetes deployment using helm
 
 ---
 
@@ -63,13 +64,15 @@ The GitHub Actions pipeline performs the following steps:
 ```bash
 .
 ├── .github/workflows/
-│   └── cicd.yaml
+│   └── build.yaml
 ├── app/
 │   ├── Dockerfile
 │   ├── package.json
+|   ├── package-lock.json
+|   ├── index.js
 │   └── source-code
-├── monitoring/
-├── kubernetes/
+├── helm/
+├── k8s/
 └── README.md
 ```
 
