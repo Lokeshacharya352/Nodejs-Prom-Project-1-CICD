@@ -61,7 +61,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Install kubectl
-        run: azure/setup-kubectl@v4
+        uses: azure/setup-kubectl@v4
       
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
