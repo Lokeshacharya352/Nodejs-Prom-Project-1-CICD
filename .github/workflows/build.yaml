@@ -48,7 +48,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Trivy
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@0.36.0
         with:
           image-ref: ${{ secrets.DOCKER_USERNAME }}/node-prom-app:${{ github.sha }}
           format: 'table'
